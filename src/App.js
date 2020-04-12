@@ -21,6 +21,7 @@ class App extends React.Component {
     const quoteBoxStyle = {
       backgroundImage: `url(${this.state.bg})`
     };
+    const tweet = `https://twitter.com/intent/tweet?text=${this.state.quoteItem.quote}&hashtags=Random Quote,by ${this.state.quoteItem.author}`;
     return (<div className="App container-fluid h-100 p-0">
       <div id="quote-box" className="h-100 p-0 row" style={quoteBoxStyle}>
         <div id="quote-item" className="col-md-6 m-auto">
@@ -28,7 +29,7 @@ class App extends React.Component {
           <p id="author" className="text-right">-{this.state.quoteItem.author}</p>
         </div>
         <button id="new-quote" onClick={this.handleNewQuoteClick}>New Quote</button>
-        <button id="tweet-quote">Tweet Quote</button>
+        <a id="tweet-quote" href={tweet} target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter"></i></a>
       </div>
     </div>);
   }
