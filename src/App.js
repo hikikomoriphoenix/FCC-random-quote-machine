@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import quotes from './quotes';
 import {SwitchTransition, CSSTransition} from 'react-transition-group';
 
