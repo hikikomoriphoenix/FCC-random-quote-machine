@@ -3,6 +3,7 @@
   position: absolute;
   object-fit: cover;
   margin: 0;
+  transition: opacity 1s;
 }
 
 #quote-box {
