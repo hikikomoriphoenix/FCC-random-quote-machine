@@ -1,11 +1,17 @@
+.bg-image {
+  display: block;
+  position: absolute;
+  object-fit: cover;
+  margin: 0;
+}
+
 #quote-box {
-  background: DarkGrey no-repeat center center;
-  background-size: cover;
+  position: absolute;
   margin: 0;
 }
 
 #quote-item {
-  font-size: 32px;
+  font-size: 40px;
   color: white;
   background: transparent;
 }
@@ -14,10 +20,45 @@
   position: absolute;
   right: 40px;
   bottom: 40px;
+  font-size: 24px;
+  color: white;
+}
+
+#new-quote:hover {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  color: black;
+}
+
+#new-quote:focus, #new-quote:active {
+   outline: none !important;
+   box-shadow: none;
 }
 
 #tweet-quote {
   position: absolute;
   left: 40px;
   bottom: 40px;
+  font-size: 48px;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: scaleX(1.1);
+  transition: opacity 500ms, transform 500ms;
 }
